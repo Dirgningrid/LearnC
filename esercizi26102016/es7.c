@@ -12,15 +12,16 @@
 int main(){
     float array[] = { 35.4, 46.7, 77.55, 11.1, 9.04, 0.75 };
     float sum = 0;
-    int cont = 5;
-    float avg_pond = 0;
+    int pos = 6;
+    float pond = 0;
+    float avg;
 
-    for (int i = 0; i < cont/2; i++){
-        cont++;
-        sum += array[i];
+    for (int i = 0; i < pos; i++){
+        pond += (pos - i);
+        sum += array[i] * pond;
     }
 
-    avg = sum / cont;
+    avg = sum / pond;
 
     printf("%.2f", avg);
 }

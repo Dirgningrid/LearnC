@@ -5,7 +5,7 @@
 
 int main(){
     int x;
-    printf("inserisci x: \h");
-    scanf("%d \h", &x);
+    printf("inserisci x: \n");
+    scanf("%d \n", &x); //& è l'indirizzo di memoria
     printf("il valore digitato è: %d", x);
 }
