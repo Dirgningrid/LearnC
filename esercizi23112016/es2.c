@@ -5,6 +5,7 @@
 /*
  * Esercizio 2
  * Dato un file (numbers.txt) con N elementi di tipo Integer, eseguirne la somma e stamparla a video
+ * Risultato = 4922
  */
 
 #include <stdio.h>
@@ -28,7 +29,7 @@ void letturaFile(FILE *file, int *nmb){
     file = fopen (MIO_FILE,"r");
     if (file != NULL) {
         while(!feof(file)){
-            fscanf(file, "%d", &tmp);
+            fscanf(file, "%d \n", &tmp);
             *nmb += tmp;
         }
     } else {

@@ -5,6 +5,7 @@
 /*
  * Esercizio 3
  * Dato un file (numbers.txt) con N elementi di tipo Integer, eseguirne la sottrazione e stamparla a video
+ * Risultato = -4754
  */
 
 #include <stdio.h>
@@ -27,7 +28,7 @@ void letturaFile(FILE *file, int *nmb){
     file = fopen (MIO_FILE,"r");
     if (file != NULL) {
         while(!feof(file)){
-            fscanf(file, "%d", &tmp);
+            fscanf(file, "%d \n", &tmp);
             if(*nmb == 0){
                 *nmb = tmp;
             } else {

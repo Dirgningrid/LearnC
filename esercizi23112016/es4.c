@@ -5,6 +5,7 @@
 /*
  * Esercizio 4
  * Dato un file (numbers.txt) con N elementi di tipo Int, eseguirne la moltiplicazione e stamparli a video
+ * Risultato = 4.135566e+154
  */
 
 #include <stdio.h>
@@ -17,7 +18,7 @@ int main(){
     double x = 1;
 
     letturaFile(fp, &x);
-    printf("la moltiplicazione di numbers.txt è: %lf \n", x);
+    printf("la moltiplicazione di numbers.txt è: %e \n", x);
 
     return 0;
 }
@@ -27,7 +28,7 @@ void letturaFile(FILE *file, double *nmb){
     file = fopen (MIO_FILE,"r");
     if (file != NULL) {
         while(!feof(file)){
-            fscanf(file, "%d", &tmp);
+            fscanf(file, "%d \n", &tmp);
             *nmb *= tmp;
         }
     } else {

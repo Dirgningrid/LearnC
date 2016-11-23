@@ -6,6 +6,7 @@
  * Esercizio 5
  * Dato un file (numbers.txt) con N elementi di tipo Int,
  * eseguirne la MEDIA ARITMETICA e stamparne il risultato a video
+ * Risultato = 48
  */
 
 #include <stdio.h>
@@ -24,13 +25,18 @@ int main(){
 }
 
 void letturaFile(FILE *file, int *nmb){
-    int tmp = 1;
+    int tmp = 0;
+    int sum = 0;
+    int count = 1;
     file = fopen (MIO_FILE,"r");
     if (file != NULL) {
         while(!feof(file)){
-            fscanf(file, "%d", &tmp);
-            *nmb += tmp;
+            fscanf(file, "%d \n", &tmp);
+            //printf("%d \n", count);
+            count++;
+            sum += tmp;
         }
+        *nmb = sum / count;
     } else {
         printf ("Impossibile aprire il file %s in lettura\n", MIO_FILE);
     }
